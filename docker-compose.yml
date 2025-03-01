@@ -53,13 +53,13 @@ services:
       - "traefik.enable=true"
       - "traefik.http.services.frontend.loadbalancer.server.port=8080"
       - "traefik.http.routers.frontend-http.entrypoints=web"
-      - "traefik.http.routers.frontend-http.rule=Host(`ursulaokafo.duckdns.org`)"
+      - "traefik.http.routers.frontend-http.rule=Host(`ursulaonyi.duckdns.org`)"
       - "traefik.http.routers.frontend-http.service=frontend"
       # tls
       - "traefik.http.routers.frontend-https.tls=true"
       - "traefik.http.routers.frontend-https.tls.certresolver=myresolver"
       - "traefik.http.routers.frontend-https.entrypoints=websecure"
-      - "traefik.http.routers.frontend-https.rule=Host(`ursulaokafo.duckdns.org`)"
+      - "traefik.http.routers.frontend-https.rule=Host(`ursulaonyi.duckdns.org`)"
       - "traefik.http.routers.frontend-https.service=frontend"
       # tls redirect
       - "traefik.http.routers.frontend-http.middlewares=redirect-https"
@@ -81,12 +81,12 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.authapi-http.entrypoints=web"
-      - "traefik.http.routers.authapi-http.rule=Host(`ursulaokafo.duckdns.org`) && PathPrefix(`/api/auth`)"
+      - "traefik.http.routers.authapi-http.rule=Host(`ursulaonyi.duckdns.org`) && PathPrefix(`/api/auth`)"
       # tls
       - "traefik.http.routers.authapi-https.tls=true"
       - "traefik.http.routers.authapi-https.tls.certresolver=myresolver"
       - "traefik.http.routers.authapi-https.entrypoints=websecure"
-      - "traefik.http.routers.authapi-https.rule=Host(`ursulaokafo.duckdns.org`) && PathPrefix(`/api/auth`)"
+      - "traefik.http.routers.authapi-https.rule=Host(`ursulaonyi.duckdns.org`) && PathPrefix(`/api/auth`)"
       # tls redirect
       - "traefik.http.routers.authapi-http.middlewares=redirect-https"
       - "traefik.http.middlewares.redirect-https.redirectScheme.scheme=https"
@@ -109,12 +109,12 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.todosapi-http.entrypoints=web"
-      - "traefik.http.routers.todosapi-http.rule=Host(`ursulaokafo.duckdns.org`) && PathPrefix(`/api/todos`)"
+      - "traefik.http.routers.todosapi-http.rule=Host(`ursulaonyi.duckdns.org`) && PathPrefix(`/api/todos`)"
       # tls
       - "traefik.http.routers.todosapi-https.tls=true"
       - "traefik.http.routers.todosapi-https.tls.certresolver=myresolver"
       - "traefik.http.routers.todosapi-https.entrypoints=websecure"
-      - "traefik.http.routers.todosapi-https.rule=Host(`ursulaokafo.duckdns.org`) && PathPrefix(`/api/todos`)"
+      - "traefik.http.routers.todosapi-https.rule=Host(`ursulaonyi.duckdns.org`) && PathPrefix(`/api/todos`)"
       # tls redirect
       - "traefik.http.routers.todosapi-http.middlewares=redirect-https"
       - "traefik.http.middlewares.redirect-https.redirectScheme.scheme=https"
@@ -132,12 +132,12 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.usersapi-http.entrypoints=web"
-      - "traefik.http.routers.usersapi-http.rule=Host(`ursulaokafo.duckdns.org`) && PathPrefix(`/api/users`)"
+      - "traefik.http.routers.usersapi-http.rule=Host(`ursulaonyi.duckdns.org`) && PathPrefix(`/api/users`)"
       # tls
       - "traefik.http.routers.usersapi-https.tls=true"
       - "traefik.http.routers.usersapi-https.tls.certresolver=myresolver"
       - "traefik.http.routers.usersapi-https.entrypoints=websecure"
-      - "traefik.http.routers.usersapi-https.rule=Host(`ursulaokafo.duckdns.org`) && PathPrefix(`/api/users`)"
+      - "traefik.http.routers.usersapi-https.rule=Host(`ursulaonyi.duckdns.org`) && PathPrefix(`/api/users`)"
       # tls redirect
       - "traefik.http.routers.usersapi-http.middlewares=redirect-https"
       - "traefik.http.middlewares.redirect-https.redirectScheme.scheme=https"
